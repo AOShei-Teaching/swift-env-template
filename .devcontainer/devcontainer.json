@@ -5,8 +5,8 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"sswg.swift-lang",       // Official Swift Extension
-				"vadimcn.vscode-lldb",   // Debugger
+				"swiftlang.swift-vscode",       // Official Swift Extension
+				"vadimcn.vscode-lldb",		// Debugger
 				"editorconfig.editorconfig"
 			],
 			"settings": {
