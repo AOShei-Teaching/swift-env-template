@@ -1,0 +1,40 @@
+{
+	"name": "Swift Course Environment (Tokamak & Vapor)",
+	// This image includes Swift, the WASM toolchain, and 'carton' (the build tool)
+	"image": "ghcr.io/swiftwasm/carton:latest",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"sswg.swift-lang",       // Official Swift Extension
+				"vadimcn.vscode-lldb",   // Debugger
+				"editorconfig.editorconfig"
+			],
+			"settings": {
+				"swift.path": "/usr/bin/swift",
+				"editor.formatOnSave": true,
+				"files.watcherExclude": {
+					"**/.build/**": true,
+					"**/.git/**": true
+				}
+			}
+		}
+	},
+
+	// Forward ports:
+	// 8080 is standard for Vapor and Tokamak dev servers
+	"forwardPorts": [8080],
+
+	// Post-create command to ensure everything is tidy
+	// You could add 'swift package resolve' here if you have a starter project
+	"postCreateCommand": "swift --version && echo 'Ready to code! Run `carton dev` to start the web server.'",
+
+	"remoteUser": "vscode",
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "installZsh": "true",
+            "username": "vscode"
+        },
+        "ghcr.io/devcontainers/features/git:1": {}
+    }
+}
+
