@@ -10,7 +10,6 @@
 				"editorconfig.editorconfig"
 			],
 			"settings": {
-				"swift.path": "/usr/bin/swift",
 				"editor.formatOnSave": true,
 				"files.watcherExclude": {
 					"**/.build/**": true,
