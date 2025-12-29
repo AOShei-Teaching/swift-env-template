@@ -22,10 +22,10 @@ Once your new repository is created:
 Wait about 2-3 minutes. GitHub is building a Linux container with Swift 6, the Tokamak WebAssembly tools, and all necessary VS Code extensions pre-installed for you.
 
 ## 🛠 What's Included?
-**Swift 6 Toolchain:** The latest version of the language.
-**TokamakDOM:** A framework compatible with SwiftUI that renders to the browser (for UI assignments).
-**Vapor:** A server-side Swift framework (for Backend assignments).
-**Carton:** A bundler for running Swift WebAssembly apps.
+- **Swift 6 Toolchain:** The latest version of the language.
+- **TokamakDOM:** A framework compatible with SwiftUI that renders to the browser (for UI assignments).
+- **Vapor:** A server-side Swift framework (for Backend assignments).
+- **Carton:** A bundler for running Swift WebAssembly apps.
 
 ## 💻 How to Run Your Code
 
