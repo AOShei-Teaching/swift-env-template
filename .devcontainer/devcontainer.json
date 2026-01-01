@@ -1,33 +1,27 @@
 {
-	"name": "Swift Course Environment (Tokamak & Vapor)",
-	// This image includes Swift, the WASM toolchain, and 'carton' (the build tool)
-	"image": "ghcr.io/swiftwasm/carton:latest",
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"swiftlang.swift-vscode",       // Official Swift Extension
-				"vadimcn.vscode-lldb",		// Debugger
-				"editorconfig.editorconfig"
-			],
-			"settings": {
-				"editor.formatOnSave": true,
-				"files.watcherExclude": {
-					"**/.build/**": true,
-					"**/.git/**": true
-				}
-			}
-		}
-	},
-
-	// Forward ports:
-	// 8080 is standard for Vapor and Tokamak dev servers
-	"forwardPorts": [8080],
-
-	// Post-create command to ensure everything is tidy
-	// You could add 'swift package resolve' here if you have a starter project
-	"postCreateCommand": "swift --version && echo 'Ready to code! Run `carton dev` to start the web server.'",
-
-	"remoteUser": "vscode",
+    "name": "Swift 6 Environment",
+    "image": "swift:6.2", 
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "swiftlang.swift-vscode",
+                "vadimcn.vscode-lldb", 
+                "editorconfig.editorconfig"
+            ],
+            "settings": {
+                "editor.formatOnSave": true,
+                "files.watcherExclude": {
+                    "**/.build/**": true,
+                    "**/.git/**": true
+                }
+            }
+        }
+    },
+    "forwardPorts": [
+        8080
+    ],
+    "postCreateCommand": "sudo chown -R vscode:vscode . && swift package resolve && echo 'Ready to code! Run `swift run` to start the server.'",
+    "remoteUser": "vscode",
     "features": {
         "ghcr.io/devcontainers/features/common-utils:2": {
             "installZsh": "true",
@@ -36,4 +30,3 @@
         "ghcr.io/devcontainers/features/git:1": {}
     }
 }
-

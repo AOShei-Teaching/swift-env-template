@@ -19,29 +19,14 @@ Once your new repository is created:
 2. Switch to the Codespaces tab.
 3. Click "Create codespace on main".
 
-Wait about 2-3 minutes. GitHub is building a Linux container with Swift 6, the Tokamak WebAssembly tools, and all necessary VS Code extensions pre-installed for you.
+Wait about 2-3 minutes. GitHub is building a Linux container with Swift 6.2 and all necessary VS Code extensions pre-installed for you.
 
 ## 🛠 What's Included?
-- **Swift 6 Toolchain:** The latest version of the language.
-- **TokamakDOM:** A framework compatible with SwiftUI that renders to the browser (for UI assignments).
-- **Vapor:** A server-side Swift framework (for Backend assignments).
-- **Carton:** A bundler for running Swift WebAssembly apps.
+- **Swift 6 Toolchain:** The latest stable version of the swift language and build tools.
 
 ## 💻 How to Run Your Code
 
-#### 1. Running UI Applications (Tokamak)
-For projects where you are building a visual interface:
-Open the Terminal in VS Code (Ctrl+`).
-Run the following command:
-```
-carton dev
-```
-
-Wait for the build to finish. You will see a notification in the bottom right: "Application running on port 8080".
-Click "Open in Browser".
-Your Swift app is now running in a browser tab! As you save changes to your code, the page will automatically reload.
-
-#### 2. Running Logic & Console Apps
+#### Running Logic & Console Apps
 
 For pure logic libraries or backend tasks:
 
@@ -58,8 +43,3 @@ Sources/: Your Swift source code lives here.
 Tests/: Unit tests go here.
 Package.swift: The dependency manager file. Do not modify this unless instructed to add a new library.
 
-## 🆘 Troubleshooting
-
-"command not found: carton": If the terminal doesn't recognize commands, try closing the terminal and opening a new one, or reload the window (Ctrl+Shift+P -> "Reload Window").
-
-Port 8080 already in use: If carton dev fails, make sure you don't have another terminal running it. Kill the previous process with Ctrl+C.
